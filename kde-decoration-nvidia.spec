@@ -32,14 +32,14 @@ Klon dekoracji nvidia z Windows XP. Oferuje miêdzy innymi wklês³e pole
 z tytu³em okna oraz zaokr±glone brzegi okna.
 
 %package -n xmms-skin-%{_decoration}
-Summary:	An xmms skin %{_decoration} theme
+Summary:	An XMMS skin %{_decoration} theme
 Summary(pl):	Skórka dla XMMS-a z motywu %{_decoration}
 Group:		Themes
 Requires:	xmms
 
 # These could use better usability but i have no xmms.
 %description -n xmms-skin-%{_decoration}
-An xmms skin %{_decoration} theme.
+An XMMS skin %{_decoration} theme.
 
 %description -n xmms-skin-%{_decoration} -l pl
 Skórka dla XMMS-a z motywu %{_decoration}.
