@@ -11,14 +11,13 @@ Source0:	%{_decoration}-%{version}-3.2.0.tar.bz2
 # Source0-md5:	081e5072cb21e344e9fe3cb5c5a1c2b3
 URL:		http://www.kde-look.org/content/show.php?content=12330
 BuildRequires:	autoconf
-BuildRequires:	freetype-devel
+BuildRequires:	automake
 BuildRequires:	qt-devel >= 3.0.5
-BuildRequires:	unsermake
-BuildRequires:	xrender-devel
+BuildRequires:	kdelibs-devel
+#BuildRequires:	unsermake
 %if %{with xmms}
 BuildRequires:  xmms-devel
 %endif
-Requires:	kdelibs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -57,16 +56,20 @@ Schemat kolorów do stylu KDE - %{_decoration}.
 %build
 kde_htmldir="%{_kdedocdir}"; export kde_htmldir
 kde_icondir="%{_iconsdir}"; export kde_icondir
-cp /usr/share/automake/config.sub admin
+cp -f /usr/share/automake/config.sub admin
 ##export UNSERMAKE=/usr/share/unsermake/unsermake
 ##%{__make} -f Makefile.cvs
 
-%configure
+%configure \
+	--with-qt-libraries=%{_libdir}
+
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT%{_datadir}/apps/kdisplay/color-schemes
 install other/nvidia.kcsrc $RPM_BUILD_ROOT%{_datadir}/apps/kdisplay/color-schemes
