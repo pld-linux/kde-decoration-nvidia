@@ -21,10 +21,10 @@ Requires:	kdelibs
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-%{_decoration} is an 
+%{_decoration} kwin decoration.
 
 %description -l pl
-%{_decoration} to 
+Dekoracja kwin %{_decoration}.
 
 %package -n xmms-skin-%{_decoration}
 Summary:        An xmms skin %{_decoration} theme
@@ -45,11 +45,10 @@ Group:          Themes
 Requires:       kdebase-core
 
 %description -n kde-colorscheme-%{_decoration}
-Color scheme for KDE style - %{_decoration}
+Color scheme for KDE style - %{_decoration}.
 
 %description -n kde-colorscheme-%{_decoration} -l pl
-Schemat kolorów do stylu KDE - %{_decoration}
-
+Schemat kolorów do stylu KDE - %{_decoration}.
 
 %prep
 %setup -q -n %{_decoration}-%{version}-3.2.0
