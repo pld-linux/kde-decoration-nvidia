@@ -65,17 +65,11 @@ cp /usr/share/automake/config.sub admin
 %{__make}
 
 %install
-#m -rf $RPM_BUILD_ROOT
-#{__make} install DESTDIR=$RPM_BUILD_ROOT
+rm -rf $RPM_BUILD_ROOT
+%{__make} install DESTDIR=$RPM_BUILD_ROOT
 
 install -d $RPM_BUILD_ROOT%{_datadir}/apps/kdisplay/color-schemes
 install other/nvidia.kcsrc $RPM_BUILD_ROOT%{_datadir}/apps/kdisplay/color-schemes
-
-install -d $RPM_BUILD_ROOT%{_libdir}/kde3
-install kwin/.libs/kwin*.{la,so} $RPM_BUILD_ROOT%{_libdir}/kde3
-
-install -d $RPM_BUILD_ROOT%{_datadir}/apps/kwin
-install kwin/*.desktop $RPM_BUILD_ROOT%{_datadir}/apps/kwin
 
 %if %{with xmms}
 install -d $RPM_BUILD_ROOT%{xmms_datadir}/Skins
