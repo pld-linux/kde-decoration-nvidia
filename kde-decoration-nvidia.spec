@@ -1,16 +1,18 @@
-%bcond_without	xmms	# disable xmms
-%bcond_with	kde	# use kde logo instead of nvidia one
-
+#
+# Conditional build:
+%bcond_without	xmms	# disable xmms-skin
+#
 %define		_decoration 	nvidia
+#
 Summary:	Kwin decoration - %{_decoration}
 Summary(pl):	Dekoracja kwin - %{_decoration}
 Name:		kde-decoration-%{_decoration}
-Version:	1.0a
-Release:	3
+Version:	1.0b
+Release:	1
 License:	LGPL
 Group:		Themes
 Source0:	%{_decoration}-%{version}-3.2.0.tar.bz2
-# Source0-md5:	081e5072cb21e344e9fe3cb5c5a1c2b3
+# Source0-md5:	556a523933a1094ffa971d928551fd1b
 Patch0:		%{_decoration}-unsermake.patch
 URL:		http://www.kde-look.org/content/show.php?content=12330
 BuildRequires:	autoconf
@@ -19,9 +21,6 @@ BuildRequires:	automake
 BuildRequires:	kdebase-devel >= 9:3.2.0
 BuildRequires:	kdebase-desktop-libs >= 9:3.2.0
 Requires:	kdebase-desktop-libs >= 9:3.2.0
-%if %{with xmms}
-BuildRequires:	xmms-devel
-%endif
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -63,10 +62,6 @@ limonki.
 %patch0 -p1
 
 %build
-%if %{with kde}
-cp -rf kwin/pics/kde/* kwin/pics/
-%endif
-
 cp -f %{_datadir}/automake/config.sub admin
 export UNSERMAKE=%{_datadir}/unsermake/unsermake
 %{__make} -f Makefile.cvs
