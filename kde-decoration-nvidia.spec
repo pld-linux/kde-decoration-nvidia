@@ -16,10 +16,11 @@ Source0:	%{_decoration}-%{version}-3.2.0.tar.bz2
 Patch0:		%{_decoration}-unsermake.patch
 URL:		http://www.kde-look.org/content/show.php?content=12330
 BuildRequires:	autoconf
-BuildRequires:	unsermake
 BuildRequires:	automake
 BuildRequires:	kdebase-devel >= 9:3.2.0
 BuildRequires:	kdebase-desktop-libs >= 9:3.2.0
+BuildRequires:	rpmbuild(macros) >= 1.129
+BuildRequires:	unsermake
 Requires:	kdebase-desktop-libs >= 9:3.2.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -62,8 +63,8 @@ limonki.
 %patch0 -p1
 
 %build
-cp -f %{_datadir}/automake/config.sub admin
-export UNSERMAKE=%{_datadir}/unsermake/unsermake
+cp -f /usr/share/automake/config.sub admin
+export UNSERMAKE=/usr/share/unsermake/unsermake
 %{__make} -f Makefile.cvs
 
 %configure \
