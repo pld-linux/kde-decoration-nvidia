@@ -14,6 +14,7 @@ BuildRequires:	autoconf
 BuildRequires:	freetype-devel
 BuildRequires:	qt-devel >= 3.0.5
 BuildRequires:	unsermake
+BuildRequires:	xrender-devel
 %if %{with xmms}
 BuildRequires:  xmms-devel
 %endif
@@ -69,6 +70,12 @@ cp /usr/share/automake/config.sub admin
 
 install -d $RPM_BUILD_ROOT%{_datadir}/apps/kdisplay/color-schemes
 install other/nvidia.kcsrc $RPM_BUILD_ROOT%{_datadir}/apps/kdisplay/color-schemes
+
+install -d $RPM_BUILD_ROOT%{_libdir}/kde3
+install kwin/.libs/kwin*.{la,so} $RPM_BUILD_ROOT%{_libdir}/kde3
+
+install -d $RPM_BUILD_ROOT%{_datadir}/apps/kwin
+install kwin/*.desktop $RPM_BUILD_ROOT%{_datadir}/apps/kwin
 
 %if %{with xmms}
 install -d $RPM_BUILD_ROOT%{xmms_datadir}/Skins
