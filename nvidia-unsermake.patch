@@ -1,0 +1,169 @@
+--- nvidia-1.0a-3.2.0/kwin/Makefile.am~	2004-05-08 04:08:41.000000000 +0200
++++ nvidia-1.0a-3.2.0/kwin/Makefile.am	2004-05-24 21:52:20.631103440 +0200
+@@ -26,86 +26,86 @@
+ 
+ EXTRA_DIST                = $(lnk_DATA)
+ 
+-tiles.h: pics/alldesktop-act.png\
+-pics/alldesktop-dis.png\
+-pics/alldesktop.png\
+-pics/border-left.png\
+-pics/border-right.png\
+-pics/bottom-center.png\
+-pics/bottom-left.png\
+-pics/bottom-right.png\
+-pics/caption-large-center.png\
+-pics/caption-large-left.png\
+-pics/caption-large-right.png\
+-pics/caption-small-center-act.png\
+-pics/caption-small-center-dis.png\
+-pics/caption-small-center.png\
+-pics/caption-small-left-act.png\
+-pics/caption-small-left-dis.png\
+-pics/caption-small-left.png\
+-pics/caption-small-right-act.png\
+-pics/caption-small-right-dis.png\
+-pics/caption-small-right.png\
+-pics/close-act-over.png\
+-pics/close-act-pressed.png\
+-pics/close-act.png\
+-pics/close-dis-pressed.png\
+-pics/close-dis.png\
+-pics/close-dis-over.png\
+-pics/close.png\
+-pics/grabbar-center.png\
+-pics/grabbar-left.png\
+-pics/grabbar-right.png\
+-pics/help-act.png\
+-pics/help-dis.png\
+-pics/help.png\
+-pics/maximize-act-over.png\
+-pics/maximize-act-pressed.png\
+-pics/maximize-act.png\
+-pics/maximize-dis-over.png\
+-pics/maximize-dis-pressed.png\
+-pics/maximize-dis.png\
+-pics/maximize.png\
+-pics/menu-act.png\
+-pics/menu-dis.png\
+-pics/menu.png\
+-pics/minimize-act-over.png\
+-pics/minimize-act-pressed.png\
+-pics/minimize-act.png\
+-pics/minimize-dis-over.png\
+-pics/minimize-dis-pressed.png\
+-pics/minimize-dis.png\
+-pics/minimize.png\
+-pics/noalldesktop-act.png\
+-pics/noalldesktop-dis.png\
+-pics/noalldesktop.png\
+-pics/restore-act-over.png\
+-pics/restore-act-pressed.png\
+-pics/restore-act.png\
+-pics/restore-dis-over.png\
+-pics/restore-dis-pressed.png\
+-pics/restore-dis.png\
+-pics/restore.png\
+-pics/titlebar-center-act.png\
+-pics/titlebar-center-dis.png\
+-pics/titlebar-center.png\
+-pics/titlebar-left-act.png\
+-pics/titlebar-left-dis.png\
+-pics/titlebar-left.png\
+-pics/titlebar-right-act.png\
+-pics/titlebar-right-dis.png\
+-pics/titlebar-right.png\
+-pics/titlebutton-round-act.png\
+-pics/titlebutton-round-dis.png\
+-pics/titlebutton-round-huge.png\
+-pics/titlebutton-round-large.png\
+-pics/titlebutton-round.png\
+-pics/titlebutton-square-act.png\
+-pics/titlebutton-square-dis.png\
+-pics/titlebutton-square-huge.png\
+-pics/titlebutton-square-large.png\
+-pics/titlebutton-square.png\
+-pics/titlebutton-transparent.png
++tiles.h: pics/alldesktop-act.png \
++	pics/alldesktop-dis.png \
++	pics/alldesktop.png \
++	pics/border-left.png \
++	pics/border-right.png \
++	pics/bottom-center.png \
++	pics/bottom-left.png \
++	pics/bottom-right.png \
++	pics/caption-large-center.png \
++	pics/caption-large-left.png \
++	pics/caption-large-right.png \
++	pics/caption-small-center-act.png \
++	pics/caption-small-center-dis.png \
++	pics/caption-small-center.png \
++	pics/caption-small-left-act.png \
++	pics/caption-small-left-dis.png \
++	pics/caption-small-left.png \
++	pics/caption-small-right-act.png \
++	pics/caption-small-right-dis.png \
++	pics/caption-small-right.png \
++	pics/close-act-over.png \
++	pics/close-act-pressed.png \
++	pics/close-act.png \
++	pics/close-dis-pressed.png \
++	pics/close-dis.png \
++	pics/close-dis-over.png \
++	pics/close.png \
++	pics/grabbar-center.png \
++	pics/grabbar-left.png \
++	pics/grabbar-right.png \
++	pics/help-act.png \
++	pics/help-dis.png \
++	pics/help.png \
++	pics/maximize-act-over.png \
++	pics/maximize-act-pressed.png \
++	pics/maximize-act.png \
++	pics/maximize-dis-over.png \
++	pics/maximize-dis-pressed.png \
++	pics/maximize-dis.png \
++	pics/maximize.png \
++	pics/menu-act.png \
++	pics/menu-dis.png \
++	pics/menu.png \
++	pics/minimize-act-over.png \
++	pics/minimize-act-pressed.png \
++	pics/minimize-act.png \
++	pics/minimize-dis-over.png \
++	pics/minimize-dis-pressed.png \
++	pics/minimize-dis.png \
++	pics/minimize.png \
++	pics/noalldesktop-act.png \
++	pics/noalldesktop-dis.png \
++	pics/noalldesktop.png \
++	pics/restore-act-over.png \
++	pics/restore-act-pressed.png \
++	pics/restore-act.png \
++	pics/restore-dis-over.png \
++	pics/restore-dis-pressed.png \
++	pics/restore-dis.png \
++	pics/restore.png \
++	pics/titlebar-center-act.png \
++	pics/titlebar-center-dis.png \
++	pics/titlebar-center.png \
++	pics/titlebar-left-act.png \
++	pics/titlebar-left-dis.png \
++	pics/titlebar-left.png \
++	pics/titlebar-right-act.png \
++	pics/titlebar-right-dis.png \
++	pics/titlebar-right.png \
++	pics/titlebutton-round-act.png \
++	pics/titlebutton-round-dis.png \
++	pics/titlebutton-round-huge.png \
++	pics/titlebutton-round-large.png \
++	pics/titlebutton-round.png \
++	pics/titlebutton-square-act.png \
++	pics/titlebutton-square-dis.png \
++	pics/titlebutton-square-huge.png \
++	pics/titlebutton-square-large.png \
++	pics/titlebutton-square.png \
++	pics/titlebutton-transparent.png
+ 
+ tiles.h: embedtool
+ 	pics=`ls $(srcdir)/pics/*.png 2>/dev/null` ;\
