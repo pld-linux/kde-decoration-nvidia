@@ -5,7 +5,7 @@
 %define		_decoration 	nvidia
 #
 Summary:	Kwin decoration - %{_decoration}
-Summary(pl):	Dekoracja kwin - %{_decoration}
+Summary(pl.UTF-8):   Dekoracja kwin - %{_decoration}
 Name:		kde-decoration-%{_decoration}
 Version:	1.0b
 Release:	1
@@ -28,13 +28,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 A clone of the nvidia Windows XP decoration. It features concave
 window title alongside with rounded window corners.
 
-%description -l pl
-Klon dekoracji nvidia z Windows XP. Oferuje mi阣zy innymi wkl阺砮 pole
-z tytu砮m okna oraz zaokr眊lone brzegi okna.
+%description -l pl.UTF-8
+Klon dekoracji nvidia z Windows XP. Oferuje mi臋dzy innymi wkl臋s艂e pole
+z tytu艂em okna oraz zaokr膮glone brzegi okna.
 
 %package -n xmms-skin-%{_decoration}
 Summary:	An XMMS skin %{_decoration} theme
-Summary(pl):	Sk髍ka dla XMMS-a z motywu %{_decoration}
+Summary(pl.UTF-8):   Sk贸rka dla XMMS-a z motywu %{_decoration}
 Group:		Themes
 Requires:	xmms
 
@@ -42,20 +42,20 @@ Requires:	xmms
 %description -n xmms-skin-%{_decoration}
 An XMMS skin %{_decoration} theme.
 
-%description -n xmms-skin-%{_decoration} -l pl
-Sk髍ka dla XMMS-a z motywu %{_decoration}.
+%description -n xmms-skin-%{_decoration} -l pl.UTF-8
+Sk贸rka dla XMMS-a z motywu %{_decoration}.
 
 %package -n kde-colorscheme-%{_decoration}
 Summary:	Color scheme for KDE style - %{_decoration}
-Summary(pl):	Schemat kolor體 do stylu KDE - %{_decoration}
+Summary(pl.UTF-8):   Schemat kolor贸w do stylu KDE - %{_decoration}
 Group:		Themes
 Requires:	kdebase-core
 
 %description -n kde-colorscheme-%{_decoration}
 A grey colorscheme with lime link and selection background.
 
-%description -n kde-colorscheme-%{_decoration} -l pl
-Szary schemat kolor體 z odno秐ikami i t砮m zaznaczenia w kolorze
+%description -n kde-colorscheme-%{_decoration} -l pl.UTF-8
+Szary schemat kolor贸w z odno艣nikami i t艂em zaznaczenia w kolorze
 limonki.
 
 %prep
