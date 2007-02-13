@@ -5,7 +5,7 @@
 %define		_decoration 	nvidia
 #
 Summary:	Kwin decoration - %{_decoration}
-Summary(pl.UTF-8):   Dekoracja kwin - %{_decoration}
+Summary(pl.UTF-8):	Dekoracja kwin - %{_decoration}
 Name:		kde-decoration-%{_decoration}
 Version:	1.0b
 Release:	1
@@ -34,7 +34,7 @@ z tytułem okna oraz zaokrąglone brzegi okna.
 
 %package -n xmms-skin-%{_decoration}
 Summary:	An XMMS skin %{_decoration} theme
-Summary(pl.UTF-8):   Skórka dla XMMS-a z motywu %{_decoration}
+Summary(pl.UTF-8):	Skórka dla XMMS-a z motywu %{_decoration}
 Group:		Themes
 Requires:	xmms
 
@@ -47,7 +47,7 @@ Skórka dla XMMS-a z motywu %{_decoration}.
 
 %package -n kde-colorscheme-%{_decoration}
 Summary:	Color scheme for KDE style - %{_decoration}
-Summary(pl.UTF-8):   Schemat kolorów do stylu KDE - %{_decoration}
+Summary(pl.UTF-8):	Schemat kolorów do stylu KDE - %{_decoration}
 Group:		Themes
 Requires:	kdebase-core
 
